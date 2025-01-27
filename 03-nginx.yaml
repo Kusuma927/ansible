@@ -1,0 +1,8 @@
+- name: nginx install
+  hosts: web
+  become: yes # -b (Sudo permission)
+  tasks:
+  - name: install nginx
+    ansible.install.package:
+      name: nginx
+      state: present
