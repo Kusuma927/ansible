@@ -1,0 +1,9 @@
+- name: dynamic variables
+  hosts: local
+  connection: local
+  vars_files:
+    -course.yaml
+  tasks:
+  - name: Print course details
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}" duration is {{ DURATION }}, trainer is {{ TRAINER }}
